@@ -1,5 +1,6 @@
 - name: nginx install and run
   hosts: web
+  become: yes # this means, it is under sudo access
   tasks:
   - name: install nginx
     ansible.builtin.package:
