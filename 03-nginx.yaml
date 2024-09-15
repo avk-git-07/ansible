@@ -3,6 +3,6 @@
   become: yes # this means, it is under sudo access
   tasks:
   - name: install nginx
-    ansible.builtin.package:
+    ansible.builtin.package: # package will handle all OS, if we know the target server's Os is linux then we can directly write dnf inplace of package.
       name: nginx
       state: present
