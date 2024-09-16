@@ -28,4 +28,10 @@
     vars:
       numbers: [1,2,3,2,5,1,6]
     ansible.builtin.debug:
-      msg: "{{ numbers | max }}"
+      msg: " Max number is {{ numbers | max }}"
+
+  - name: Find min number
+    vars:
+      numbers: [1,2,3,2,5,1,6]
+    ansible.builtin.debug:
+      msg: " Min number is {{ numbers | min }}"
