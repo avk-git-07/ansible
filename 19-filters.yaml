@@ -4,5 +4,5 @@
   tasks:
   - name: Print the default variable
     ansible.builtin.debug:
-      msg: "Hellow {{course | default('Ansible')}}"
+      msg: "Hello {{course | default('Ansible')}}"
 
