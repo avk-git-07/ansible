@@ -6,3 +6,15 @@
     ansible.builtin.debug:
       msg: "Hello {{course | default('Ansible')}}"
 
+  - name: Convert to upper case
+    vars:
+      greeting: "Hello Rajesh"
+    ansible.builtin.debug:
+      msg: "{{greeting | upper}}"
+
+  - name: Convert to lower case
+    vars:
+      greeting: "Hello Rajesh"
+    ansible.builtin.debug:
+      msg: "{{greeting | lower}}"
+      
