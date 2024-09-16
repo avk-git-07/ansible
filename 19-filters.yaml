@@ -20,6 +20,6 @@
 
   - name: find the unique values
     vars:
-      num: [1,2,3,2,5,1,6]
+      numbers: [1,2,3,2,5,1,6]
     ansible.builtin.debug:
-      msg: "{{num | unique}}"
+      msg: "{{ numbers | unique }}"
