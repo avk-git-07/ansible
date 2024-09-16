@@ -4,3 +4,11 @@
   tasks:
   - name: Execute the command
     ansible.builtin.shell: ls -ltr > /tmp/output.txt
+
+  - name: check the process
+    ansible.bultin.shell: ps -ef | grep ssh
+      register: output
+
+  - name: check the process
+    ansible.bultin.command: ps -ef | grep ssh
+      register: output 
