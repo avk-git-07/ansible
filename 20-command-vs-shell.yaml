@@ -7,8 +7,8 @@
 
   - name: check the process
     ansible.bultin.shell: ps -ef | grep ssh
-      register: output
+    register: output
 
   - name: check the process
     ansible.bultin.command: ps -ef | grep ssh
-      register: output 
+    register: output 
