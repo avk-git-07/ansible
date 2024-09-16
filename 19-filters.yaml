@@ -35,3 +35,12 @@
       numbers: [1,2,3,2,5,1,6]
     ansible.builtin.debug:
       msg: " Min number is {{ numbers | min }}"
+
+  - name: Convert map to list
+    vars:
+      course:
+        name: "DevOps with AWS"
+        duration: "120 hrs"
+        trainer: "Sivakumar Reddy M"
+    ansible.builting.debug:
+      msg: "Course List: {{course | dict2items}}"
