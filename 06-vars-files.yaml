@@ -1,0 +1,8 @@
+- name: Accessing variables from file
+  hosts: web
+  vars_files:
+  - vars.yaml
+  tasks:
+    - name: Print the course information
+      ansible.builtin.debug:
+        msg: "Hi I am learing {{course}}, duration is {{duration}}, and trainer is {{trainer}}."
