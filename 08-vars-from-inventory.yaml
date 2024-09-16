@@ -1,0 +1,6 @@
+- name: Accessing variables from inventory file
+  hosts: web # here variables info not specified, in this case it will search in inventory file. 
+  tasks:
+    - name: Print the course information
+      ansible.builtin.debug:
+        msg: "Hi I am learing {{course}}, duration is {{duration}}, and trainer is {{trainer}}."
