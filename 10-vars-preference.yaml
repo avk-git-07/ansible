@@ -1,0 +1,24 @@
+- name: Accessing variables from inventory file
+  hosts: web 
+  vars: # from play level
+    course: "from play level"
+    trainer: "Sivakumar Reddy"
+    duration: "120 hrs"
+  vars_prompt:
+  - name: course
+    prompt: Please enter the course name.
+    private: false # means not confidential, it will be visible at the time of entry.
+  - name: duration
+    prompt: Please enter the total duration.
+    private: false
+  - name: trainer
+    prompt: Please enter the name of the trainer.
+    private: false
+  tasks:
+    - name: Print the course information
+      vars: # from play level
+        course: "from task level"
+        trainer: "Sivakumar Reddy"
+        duration: "120 hrs"
+      ansible.builtin.debug:
+        msg: "Hi I am learing {{course}}, duration is {{duration}}, and trainer is {{trainer}}."
