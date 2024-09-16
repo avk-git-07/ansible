@@ -23,3 +23,9 @@
       numbers: [1,2,3,2,5,1,6]
     ansible.builtin.debug:
       msg: "{{ numbers | unique }}"
+
+  - name: Find max number
+    vars:
+      numbers: [1,2,3,2,5,1,6]
+    ansible.builtin.debug:
+      msg: "{{ numbers | max }}"
