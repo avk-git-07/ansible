@@ -22,7 +22,7 @@
     vars:
       numbers: [1,2,3,2,5,1,6]
     ansible.builtin.debug:
-      msg: "{{ numbers | unique }}"
+      msg: " Unique values are {{ numbers | unique }}"
 
   - name: Find max number
     vars:
