@@ -9,6 +9,6 @@
     ansible.builtin.shell: ps -ef | grep ssh
     register: output
 
-  - name: check the process
+  - name: check the process # "ps -ef | grep ssh" will not work with command module, it will work with shell
     ansible.builtin.command: ps -ef | grep ssh
     register: output 

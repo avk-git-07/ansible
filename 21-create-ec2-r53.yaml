@@ -12,6 +12,12 @@
     zone: avk07.online
   
   tasks:
+  - name: ansible to install boto3 and botocore
+    ansible.builtin.pip: # this is ansible pip module
+      name:
+      - boto3
+     # - botocore
+      executable: pip3.9
   - name: create ec2 instance
     amazon.aws.ec2_instance:
       name: "{{item}}"
@@ -52,3 +58,4 @@
       overwrite: true
     loop: "{{ec2_instances.results}}"
     when: item.item == "frontend"
+
